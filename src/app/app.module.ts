@@ -7,13 +7,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { BgColorChangeDirective } from './bg-color-change.directive';
 import { Ex1Component } from './ex1/ex1.component';
+import { Webpage1Component } from './webpage1/webpage1.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BgColorChangeDirective,
-    Ex1Component
+    Ex1Component,
+    Webpage1Component
   ],
   imports: [
     BrowserModule,
