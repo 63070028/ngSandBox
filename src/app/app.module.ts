@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { BgColorChangeDirective } from './bg-color-change.directive';
 import { Ex1Component } from './ex1/ex1.component';
 import { Webpage1Component } from './webpage1/webpage1.component';
+import { Ex2Component } from './ex2/ex2.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { Webpage1Component } from './webpage1/webpage1.component';
     HomeComponent,
     BgColorChangeDirective,
     Ex1Component,
-    Webpage1Component
+    Webpage1Component,
+    Ex2Component
   ],
   imports: [
     BrowserModule,

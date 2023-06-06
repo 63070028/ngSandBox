@@ -1,0 +1,60 @@
+<div class="container">
+  <p class="fs-1 text-center">Observable vs Subject</p>
+  <div class="row">
+    <div class="col-6 border">
+      <p class="fs-3 text-center">Observable</p>
+      <div class="row">
+        <div class="col">
+          <p>Observer 1</p>
+          <p>Couter: {{ observer1 }}</p>
+        </div>
+        <div class="col">
+          <p>Observer 2</p>
+          <p>Couter: {{ observer2 }}</p>
+        </div>
+        <div class="col text-danger">
+          <p>Observer 3 (deley 5s)</p>
+          <p>Couter: {{ observer3 }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 border">
+      <p class="fs-3 text-center">Subject</p>
+      <div class="row">
+        <div class="col">
+          <p>Observer 4</p>
+          <p>Couter: {{ observer4 }}</p>
+        </div>
+        <div class="col">
+          <p>Observer 5</p>
+          <p>Couter: {{ observer5 }}</p>
+        </div>
+        <div class="col text-danger">
+          <p>Observer 6 (deley 5s)</p>
+          <p>Couter: {{ observer6 }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="d-flex flex-column justify-content-center align-items-center border my-5"
+  >
+    <p class="fs-3 text-center">Observable and Share()</p>
+    <div class="d-flex justify-content-between w-50">
+      <div>
+        <p>Observer 7</p>
+        <p>Couter: {{ observer7 }}</p>
+      </div>
+      <div>
+        <p>Observer 8</p>
+        <p>Couter: {{ observer8 }}</p>
+      </div>
+      <div class="text-danger">
+        <p>Observer 9 (deley 5s)</p>
+        <p>Couter: {{ observer9 }}</p>
+      </div>
+    </div>
+  </div>
+</div>
