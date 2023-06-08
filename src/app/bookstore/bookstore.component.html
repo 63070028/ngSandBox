@@ -1,0 +1,55 @@
+<nav class="navbar bg-warning">
+    <div class="container-fluid d-flex">
+      <a class="navbar-brand" href="#">Book Store</a>
+      <button class="btn btn-danger" (click)="openEnd(content)">ตระกร้า</button>
+    </div>
+</nav>
+
+
+<div class="container my-5">
+    <p class="fs-1 text-center">รายการหนังสือ</p>
+    <div class="row gap-5">
+        <div class="col-2 bg-light border p-3 d-flex justify-content-center align-items-center rounded-1" *ngFor="let book of books">
+            <div >
+                <img class="mw-100 mh-100 rounded-1" src="https://www.phoenixnext.com/img/600/744/resize/catalog/product/s/h/shumatsu_1_jacket_cover-01.jpg" height="300">
+                <p class="my-2">Name</p>
+                <div class="d-grid mt-3">
+                    <button class="btn primary-btn" >เพื่ม - ฿ ราคา</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #content let-offcanvas>
+	<div class="offcanvas-header">
+		<h4 class="offcanvas-title">ตระกร้าของฉัน</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>
+	</div>
+	<div class="offcanvas-body">
+        <div class="d-flex flex-column justify-content-between h-100">
+
+            <div>
+                <p class="fs-4">รายการ</p>
+                <div class="bg-light d-flex justify-content-between border">
+                    <div class="d-flex p-3 gap-3">
+                        <img class="mw-100 mh-100" src="https://www.phoenixnext.com/img/600/744/resize/catalog/product/s/h/shumatsu_1_jacket_cover-01.jpg" height="100">
+                        <div>
+                            <p>ราคา:</p>
+                            <p>จำนวน:</p>
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-danger">ลบ</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn" (click)="offcanvas.dismiss('Cross click')">ช็อปต่อ</button>
+                <button class="btn primary-btn">สั่งซื้อ</button>
+              </div>
+        </div>
+	</div>
+</ng-template>

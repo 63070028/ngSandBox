@@ -10,6 +10,7 @@ import { Ex1Component } from './ex1/ex1.component';
 import { Webpage1Component } from './webpage1/webpage1.component';
 import { Ex2Component } from './ex2/ex2.component';
 import { Ex3Component } from './ex3/ex3.component';
+import { BookstoreComponent } from './bookstore/bookstore.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Ex3Component } from './ex3/ex3.component';
     Ex1Component,
     Webpage1Component,
     Ex2Component,
-    Ex3Component
+    Ex3Component,
+    BookstoreComponent
   ],
   imports: [
     BrowserModule,
