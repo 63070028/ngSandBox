@@ -1,6 +1,7 @@
 export interface Book {
-    id:string,
-    image?:string,
-    name:string,
-    price:number
+    id?:string | null,
+    image?:string | null,
+    name?:string | null,
+    category?:string | null,
+    price?:number | null
 }

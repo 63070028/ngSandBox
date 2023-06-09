@@ -11,6 +11,7 @@ import { Webpage1Component } from './webpage1/webpage1.component';
 import { Ex2Component } from './ex2/ex2.component';
 import { Ex3Component } from './ex3/ex3.component';
 import { BookstoreComponent } from './bookstore/bookstore.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,10 @@ import { BookstoreComponent } from './bookstore/bookstore.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
-  ],
+    NgbModule,
+    ReactiveFormsModule
+
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
