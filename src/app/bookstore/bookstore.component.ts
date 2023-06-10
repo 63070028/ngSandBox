@@ -1,11 +1,11 @@
 import { Component, TemplateRef, ViewEncapsulation } from '@angular/core';
 import { Book } from '../models/book';
 import { BookService } from '../book.service';
-import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
+import { NgbOffcanvas, NgbOffcanvasRef } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CartItem } from '../models/cart-item';
-import { BehaviorSubject, Observable, map, of } from 'rxjs';
+
 
 
 @Component({
@@ -17,6 +17,7 @@ import { BehaviorSubject, Observable, map, of } from 'rxjs';
 export class BookstoreComponent {
   books: Book[] = [];
   myCart: CartItem[] = [];
+  modelCart?:NgbOffcanvasRef;
 
 
   constructor(
@@ -27,8 +28,8 @@ export class BookstoreComponent {
     this.books = bookService.getAll();
   }
 
-  openEnd(cart: TemplateRef<any>) {
-    this.offcanvasService.open(cart, { position: 'end' });
+  openCart(cart: TemplateRef<any>) {
+    this.modelCart = this.offcanvasService.open(cart, { position: 'end' });
   }
 
   openFormAddBook(formAddBook: TemplateRef<any>) {
@@ -45,10 +46,12 @@ export class BookstoreComponent {
       category:book.category,
       price:String(book.price)
     })
-
-
-
   }
+
+  openOrder(order:TemplateRef<any>) {
+    this.modelCart?.close();
+		this.modalService.open(order, { size: 'lg' });
+	}
 
 
 
@@ -157,6 +160,9 @@ export class BookstoreComponent {
   get totalPrice():number{
     return this.myCart.reduce((sum, cartItem) => sum + Number(cartItem.price) * cartItem.amount, 0)
   }
+
+
+
 
 }
 

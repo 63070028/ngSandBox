@@ -3,7 +3,7 @@
       <a class="navbar-brand" href="#">Book Store</a>
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button class="btn btn-info text-white" (click)="openFormAddBook(formAddBook)">เพื่มหนังสือ</button>
-        <button class="btn btn-danger" (click)="openEnd(cart)">ตระกร้า</button>
+        <button class="btn btn-danger" (click)="openCart(cart)">ตระกร้า</button>
       </div>
     </div>
 </nav>
@@ -62,7 +62,7 @@
               </div>
               <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn" (click)="offcanvas.dismiss('Cross click')">ช็อปต่อ</button>
-                <button class="btn primary-btn">สั่งซื้อ</button>
+                <button class="btn primary-btn" (click)="openOrder(order)">สั่งซื้อ</button>
               </div>
             </div>
         </div>
@@ -171,5 +171,46 @@
     </div>
 	</div>
 </ng-template>
+
+
+<ng-template #order let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">Order #xxxxxx</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col" colspan="6">ชื่อ</th>
+          <th scope="col">ราคา</th>
+          <th scope="col">จำนวน</th>
+          <th scope="col">รวม</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cartItem of myCart">
+          <td colspan="6"><img [src]="cartItem.image" width="55" height="80"><span class="ms-3">{{cartItem.name}}</span></td>
+          <td>{{cartItem.price}}</td>
+          <td>{{cartItem.amount}}</td>
+          <td>{{ (cartItem.price ?? 0) * cartItem.amount }}</td>
+        </tr>
+        <tr>
+          <td colspan="8" class="text-end">รวม</td>
+          <td>฿{{totalPrice}}</td>
+        </tr>
+        <tr>
+          <td colspan="8" class="text-end">ค่าจัดส่ง</td>
+          <td>฿35</td>
+        </tr>
+        <tr>
+          <td colspan="8" class="text-end">ราคาสุทธิ</td>
+          <td>฿{{totalPrice+35}}</td>
+        </tr>
+      </tbody>
+    </table>
+	</div>
+</ng-template>
+
 
 
