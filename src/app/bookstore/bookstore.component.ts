@@ -4,6 +4,8 @@ import { BookService } from '../book.service';
 import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { CartItem } from '../models/cart-item';
+import { BehaviorSubject, Observable, map, of } from 'rxjs';
 
 
 @Component({
@@ -14,7 +16,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class BookstoreComponent {
   books: Book[] = [];
-  cart: Book[] = [];
+  myCart: CartItem[] = [];
+
 
   constructor(
     private bookService: BookService,
@@ -134,6 +137,26 @@ export class BookstoreComponent {
     this.books.splice(index, 1);
   }
 
+  
+  addBookInCart(book:Book){
+    const target = this.myCart.find(cartItem => cartItem.book_id === book.id)
+    if(target){
+      target.amount++;
+    }
+    else{
+      const cartItem:CartItem = {book_id:book.id,image:book.image, name:book.name, category:book.category, price:book.price, amount:1}
+      this.myCart.push(cartItem);
+    }
+  }
+
+  deleteBookInCart(book_id:any){
+    const index = this.myCart.findIndex(cartItem => cartItem.book_id === book_id)
+    this.myCart.splice(index, 1)
+  }
+
+  get totalPrice():number{
+    return this.myCart.reduce((sum, cartItem) => sum + Number(cartItem.price) * cartItem.amount, 0)
+  }
 
 }
 
