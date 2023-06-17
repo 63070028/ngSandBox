@@ -1,0 +1,18 @@
+<div class="border w-25 p-3">
+    <p>UserName: {{name}}</p>  
+    <p>Role: {{role}}</p>  
+    <div>
+        <div>
+            <input #nameInput class="form-control" type="text">
+            <button class="btn btn-warning my-3" (click)="changeName(nameInput.value)">change name</button>
+        </div>
+        <div>
+            <select #roleSelect class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="normal">normal</option>
+                <option value="admin">admin</option>
+              </select>
+            <button class="btn btn-warning my-3" (click)="changeRole(roleSelect.value)" >change role</button>
+        </div>
+    </div>
+</div>

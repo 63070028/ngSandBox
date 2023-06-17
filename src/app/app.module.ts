@@ -12,6 +12,14 @@ import { Ex2Component } from './ex2/ex2.component';
 import { Ex3Component } from './ex3/ex3.component';
 import { BookstoreComponent } from './bookstore/bookstore.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Ex4Component } from './ex4/ex4.component';
+
+import { StoreModule } from '@ngrx/store';
+import { UserReducer, counterReducer } from './store';
+import { NgrxCountComponent } from './ngrx-count/ngrx-count.component';
+import { UserStatusComponent } from './user-status/user-status.component';
+import { Ex5Component } from './ex5/ex5.component';
+
 
 @NgModule({
   declarations: [
@@ -22,14 +30,18 @@ import { ReactiveFormsModule } from '@angular/forms';
     Webpage1Component,
     Ex2Component,
     Ex3Component,
-    BookstoreComponent
+    BookstoreComponent,
+    Ex4Component,
+    NgrxCountComponent,
+    UserStatusComponent,
+    Ex5Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    StoreModule.forRoot({count: counterReducer, user: UserReducer}),
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -161,6 +161,10 @@ export class BookstoreComponent {
     return this.myCart.reduce((sum, cartItem) => sum + Number(cartItem.price) * cartItem.amount, 0)
   }
 
+  resultPrice(price:number, amount:number):number{
+    return price*amount;
+  }
+
 
 
 
