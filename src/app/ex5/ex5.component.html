@@ -1,3 +1,24 @@
 <div class="container">
-    <p class="text-center fs-1">Testing By Jest</p>
+    <p class="text-center fs-1">ViewChild & ViewChildren</p>
+
+    <div class="m-5" style="height: 150px;">
+            <div #boxElement class="bg-danger h-100 text-white d-flex justify-content-center align-items-center"><p class="fs-2">@ViewChild</p></div>
+     </div>
+
+    <div class="row g-3">
+        <p class="fs-2">Toggle</p>
+        <div  class="col-3" style="height: 150px;" *ngFor="let box of boxs; let i = index;">
+            <div #boxElements class="bg-warning h-100 text-white d-flex justify-content-center align-items-center" (click)="changeBgToggle(boxElements)"><p class="text-center fs-4">@ViewChildren {{i}}</p></div>
+        </div>
+    </div>
+
+    <div class="row g-3 mt-5">
+        <p class="fs-2">Select</p>
+        <div  class="col-3" style="height: 150px;" *ngFor="let box of boxs; let i = index;">
+            <div #boxToggleElements class="bg-warning h-100 text-white d-flex justify-content-center align-items-center" (click)="changeBgSelect(boxToggleElements)"><p class="text-center fs-4">@ViewChildren {{i}}</p></div>
+        </div>
+    </div>
+
+    
+
 </div>
