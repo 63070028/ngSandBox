@@ -9,6 +9,7 @@ import { BookstoreComponent } from './bookstore/bookstore.component';
 import { Ex4Component } from './ex4/ex4.component';
 import { Ex5Component } from './ex5/ex5.component';
 import { Ex6Component } from './ex6/ex6.component';
+import { Webpage2Component } from './webpage2/webpage2.component';
 
 const routes: Routes = [
   {path:'ex1', component: Ex1Component},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'ex6', component: Ex6Component},
   {path:'bookstore', component: BookstoreComponent},
   {path:'webpage1', component: Webpage1Component},
+  {path:'webpage2', component: Webpage2Component},
   { path: '**', component: HomeComponent},
 ];
 

@@ -20,6 +20,7 @@ import { UserStatusComponent } from './user-status/user-status.component';
 import { Ex5Component } from './ex5/ex5.component';
 import { Ex6Component } from './ex6/ex6.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Webpage2Component } from './webpage2/webpage2.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     UserStatusComponent,
     Ex5Component,
     Ex6Component,
+    Webpage2Component,
   ],
   imports: [
     BrowserModule,
