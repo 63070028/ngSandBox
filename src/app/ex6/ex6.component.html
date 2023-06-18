@@ -1,0 +1,14 @@
+<div class="container">
+    <p class="fs-1 text-center">Ex6</p>
+    
+    <div>
+        <label class="fs-4">Search</label>
+        <input #inputSearch class="form-control" (input)="searchBook(inputSearch.value)">
+    </div>
+
+    <div class="mt-5">
+        <div *ngFor="let book of books">
+            <p>{{book.name}}</p>
+        </div>
+    </div>
+</div>
