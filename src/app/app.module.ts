@@ -21,6 +21,9 @@ import { Ex5Component } from './ex5/ex5.component';
 import { Ex6Component } from './ex6/ex6.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Webpage2Component } from './webpage2/webpage2.component';
+import { Ex7Component } from './ex7/ex7.component';
+import { Ex8Component } from './ex8/ex8.component';
+import { Ex9Component } from './ex9/ex9.component';
 
 
 @NgModule({
@@ -39,6 +42,9 @@ import { Webpage2Component } from './webpage2/webpage2.component';
     Ex5Component,
     Ex6Component,
     Webpage2Component,
+    Ex7Component,
+    Ex8Component,
+    Ex9Component,
   ],
   imports: [
     BrowserModule,

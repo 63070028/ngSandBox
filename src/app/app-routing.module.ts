@@ -10,6 +10,9 @@ import { Ex4Component } from './ex4/ex4.component';
 import { Ex5Component } from './ex5/ex5.component';
 import { Ex6Component } from './ex6/ex6.component';
 import { Webpage2Component } from './webpage2/webpage2.component';
+import { Ex7Component } from './ex7/ex7.component';
+import { Ex8Component } from './ex8/ex8.component';
+import { Ex9Component } from './ex9/ex9.component';
 
 const routes: Routes = [
   {path:'ex1', component: Ex1Component},
@@ -18,6 +21,9 @@ const routes: Routes = [
   {path:'ex4', component: Ex4Component},
   {path:'ex5', component: Ex5Component},
   {path:'ex6', component: Ex6Component},
+  {path:'ex7', component: Ex7Component},
+  {path:'ex8', component: Ex8Component},
+  {path:'ex9', component: Ex9Component},
   {path:'bookstore', component: BookstoreComponent},
   {path:'webpage1', component: Webpage1Component},
   {path:'webpage2', component: Webpage2Component},
