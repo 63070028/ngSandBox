@@ -25,6 +25,7 @@ import { Ex7Component } from './ex7/ex7.component';
 import { Ex8Component } from './ex8/ex8.component';
 import { Ex9Component } from './ex9/ex9.component';
 import { Webpage3Component } from './webpage3/webpage3.component';
+import { Webpage4Component } from './webpage4/webpage4.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { Webpage3Component } from './webpage3/webpage3.component';
     Ex8Component,
     Ex9Component,
     Webpage3Component,
+    Webpage4Component,
   ],
   imports: [
     BrowserModule,

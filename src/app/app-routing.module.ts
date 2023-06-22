@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { Ex1Component } from './ex1/ex1.component';
@@ -14,6 +14,7 @@ import { Ex7Component } from './ex7/ex7.component';
 import { Ex8Component } from './ex8/ex8.component';
 import { Ex9Component } from './ex9/ex9.component';
 import { Webpage3Component } from './webpage3/webpage3.component';
+import { Webpage4Component } from './webpage4/webpage4.component';
 
 const routes: Routes = [
   {path:'ex1', component: Ex1Component},
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path:'webpage1', component: Webpage1Component},
   {path:'webpage2', component: Webpage2Component},
   {path:'webpage3', component: Webpage3Component},
+  {path:'webpage4', component: Webpage4Component},
   { path: '**', component: HomeComponent},
 ];
 
